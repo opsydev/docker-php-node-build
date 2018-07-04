@@ -2,7 +2,7 @@ FROM alpine:3.7
 LABEL version="1.0.0"
 LABEL maintainer="Raveesh <public@raveesh.io>"
 
-RUN apk update && apk add autoconf \
+RUN apk --no-cache --update autoconf \
     automake \
     nodejs \
     nodejs-npm \
