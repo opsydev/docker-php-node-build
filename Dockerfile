@@ -33,5 +33,5 @@ RUN apk --no-cache --update add autoconf \
     libtool \
     nasm
 
-RUN wget https://raw.githubusercontent.com/composer/getcomposer.org/1b137f8bf6db3e79a38a5bc45324414a6b1f9df2/web/installer -O - -q | php -- --quiet
+RUN wget https://raw.githubusercontent.com/composer/getcomposer.org/master/web/installer -O - -q | php -- --install-dir=/usr/bin
 RUN npm install -g yarn
