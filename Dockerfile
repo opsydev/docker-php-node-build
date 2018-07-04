@@ -33,8 +33,5 @@ RUN apk --no-cache --update autoconf \
     libtool \
     nasm
 
-COPY composer-setup.sh /tmp/composer-setup.sh
-RUN chmod +x /tmp/composer-setup.sh
-RUN /tmp/composer-setup.sh
-RUN rm /tmp/composer-setup.sh
+RUN wget https://raw.githubusercontent.com/composer/getcomposer.org/1b137f8bf6db3e79a38a5bc45324414a6b1f9df2/web/installer -O - -q | php -- --quiet
 RUN npm install -g yarn
